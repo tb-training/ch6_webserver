@@ -13,12 +13,12 @@ unless os.windows?
 end
 
 # This is an example test, replace it with your own test.
-describe port(8080) do
+describe port(80) do
   it { should be_listening }
 end
 
 ## case insensitive match
 ##
-describe command('curl http://localhost:8080') do
+describe command('curl http://localhost') do
   its('stdout') {should cmp /hello/i}
 end
