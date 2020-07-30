@@ -7,7 +7,7 @@ driver:
     - <%= ENV['AWS_SECURITY_GROUP_ID'] %>
   subnet_id: <%= ENV['AWS_SUBNET_ID'] %>
   associate_public_ip: true
-  instance_type: t3.micro
+  instance_type: t2.micro
   tags:
     # Replace YOURNAME and YOURCOMPANY here
     Name: "<tbagio> Training Node"
