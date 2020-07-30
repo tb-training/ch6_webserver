@@ -3,7 +3,8 @@ driver:
   name: ec2
   aws_ssh_key_id: <%= ENV['AWS_KEYPAIR'] %>
   region: <%= ENV['AWS_REGION'] %>
-  security_group_ids: <%= ENV['AWS_SECURITY_GROUP_ID'] %>
+  security_group_ids: 
+    - <%= ENV['AWS_SECURITY_GROUP_ID'] %>
   subnet_id: <%= ENV['AWS_SUBNET_ID'] %>
   associate_public_ip: true
   instance_type: t3.micro
@@ -15,7 +16,7 @@ driver:
     X-Dept: "sales"
     X-Customer: "apjcorp"
     X-Project: "training"
-    X-Termination-Date: "202-09-20T12:04:30Z"
+    X-Termination-Date: "2022-09-20T12:04:30Z"
     X-TTL: 40
 
 provisioner:
